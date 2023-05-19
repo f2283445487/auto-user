@@ -58,7 +58,7 @@ def get_phone_code(account_num):
 def upload_file(header):
     """上传文件"""
     # file = {'file': open(r'C:\Users\86172\Desktop\demo\files\ktp.jpg', 'rb')}
-    file_data = {'file_ktp_ocr': open('C:\\Users\\86172\\Desktop\\singa-user\\files\\ktp.jpg', 'rb')}
+    file_data = {'file_ktp_ocr': open('.\\files\\ktp.jpg', 'rb')}
     url = "http://api-test.singa.id/new/index/uploadFile"
     res = requests.post(url, files=file_data, headers=header)
     return res.json()['data']['url']
